@@ -5,6 +5,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import 'package:shop_app/models/http_exception.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 class Auth with ChangeNotifier {
   String? _token;
@@ -31,7 +32,7 @@ class Auth with ChangeNotifier {
 
   Future<void> _authenticate(
       String email, String password, String urlSegment) async {
-    String authId = 'AIzaSyBz-uGYN1Ei3qwRrVZVXc80S3urjStGHOQ';
+    String authId = dotenv.env['authID'] as String;
     final url = Uri.parse(
         'https://identitytoolkit.googleapis.com/v1/accounts:$urlSegment?key=$authId');
     try {

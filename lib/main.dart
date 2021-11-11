@@ -12,8 +12,10 @@ import 'package:provider/provider.dart';
 import 'package:shop_app/screens/splash_screen.dart';
 import 'package:shop_app/screens/user_product_screen.dart';
 import 'providers/products.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+Future main() async {
+  await dotenv.load(fileName: ".env");
   runApp(MyApp());
 }
 
