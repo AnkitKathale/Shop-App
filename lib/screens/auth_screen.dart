@@ -61,10 +61,7 @@ class AuthScreen extends StatelessWidget {
                       child: Text(
                         'MyShop',
                         style: TextStyle(
-                          color: Theme.of(context)
-                              .accentTextTheme
-                              .headline6!
-                              .color,
+                          color: Theme.of(context).textTheme.titleLarge!.color,
                           fontSize: 50,
                           fontFamily: 'Anton',
                           fontWeight: FontWeight.normal,
@@ -256,7 +253,7 @@ class _AuthCardState extends State<AuthCard> {
                         Theme.of(context).colorScheme.primary,
                       ),
                       foregroundColor: MaterialStateProperty.all(
-                          Theme.of(context).primaryTextTheme.button!.color),
+                          Theme.of(context).primaryTextTheme.labelLarge!.color),
                     ),
 
                     // color: Theme.of(context).primaryColor,

@@ -23,7 +23,7 @@ class CartItem extends StatelessWidget {
       background: Container(
         margin: EdgeInsets.symmetric(horizontal: 10, vertical: 4),
         padding: EdgeInsets.only(right: 20),
-        color: Theme.of(context).errorColor,
+        color: Theme.of(context).colorScheme.error,
         child: Icon(
           Icons.delete,
           size: 40,
@@ -65,7 +65,7 @@ class CartItem extends StatelessWidget {
             leading: CircleAvatar(
                 backgroundColor: Theme.of(context).colorScheme.primary,
                 foregroundColor:
-                    Theme.of(context).primaryTextTheme.headline6!.color,
+                    Theme.of(context).primaryTextTheme.titleLarge!.color,
                 child: FittedBox(
                     child: Padding(
                   padding: const EdgeInsets.all(5.0),
